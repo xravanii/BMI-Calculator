@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme-selector {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.app {
+  margin-top: 80px;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+}
+
+.form-container {
+  flex: 1;
+}
+
+.result-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #d3e0ea;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#bmi-display {
+  font-size: 40px;
+  font-weight: 800;
+  color:white;
+  margin-bottom: 20px;
+}
+
+#result {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#bmiChart {
+  margin-top: 20px;
+  max-width: 300px;
+}
+
+/* Theme styles */
+body.theme-default {
+  background: linear-gradient(135deg, #c3ecf7, #a7bfe8);
+  color: #000;
+}
+body.theme-ocean {
+  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  color: #fff;
+}
+body.theme-forest {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: #fff;
+}
+body.theme-sunset {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: #fff;
+}
+
+body[class*="theme-"] .app {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+body.theme-ocean .app,
+body.theme-forest .app,
+body.theme-sunset .app {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+body[class*="theme-"] button {
+  background-color: #4a90e2;
+}
+body.theme-forest button {
+  background-color: #388e3c;
+}
+body.theme-sunset button {
+  background-color: #d84315;
+}
+body.theme-ocean button {
+  background-color: #0288d1;
+}
+body[class*="theme-"] button:hover {
+  opacity: 0.9;
+}
+.heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Theme-based heading color */
+body.theme-default .heading {
+  color: #000000;
+}
+body.theme-ocean .heading {
+  color:#000000;
+}
+body.theme-forest .heading {
+  color:white;
+}
+body.theme-sunset .heading {
+  color: white;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Theme Selector at Top Left -->
+  <div class="theme-selector">
+    <label for="theme">Select Theme:</label>
+    <select id="theme">
+      <option value="default">Default</option>
+      <option value="ocean">Ocean</option>
+      <option value="forest">Forest</option>
+      <option value="sunset">Sunset</option>
+    </select>
+  </div>
+
+  <!-- Heading Outside the App Box -->
+  <h1 class="heading">BMI Calculator</h1>
+
+  <!-- App Container -->
+  <div class="app">
+    <div class="form-container">
+      <label for="age">Age:</label>
+      <input type="number" id="age" placeholder="e.g., 25" min="1" />
+
+      <label for="gender">Gender:</label>
+      <select id="gender">
+        <option value="" disabled selected>Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="height">Height:</label>
+      <div class="input-group">
+        <input type="number" id="height" placeholder="e.g., 170" min="0" />
+        <select id="height-unit">
+          <option value="cm">cm</option>
+          <option value="in">inches</option>
+          <option value="ft">feet</option>
+        </select>
+      </div>
+
+      <label for="weight">Weight:</label>
+      <div class="input-group">
+        <input type="number" id="weight" placeholder="e.g., 65" min="0" />
+        <select id="weight-unit">
+          <option value="kg">kg</option>
+          <option value="lb">lbs</option>
+        </select>
+      </div>
+
+      <button onclick="calculateBMI()">Calculate BMI</button>
+    </div>
+
+    <div class="result-container">
+      <div id="bmi-display"></div>
+      <div id="result"></div>
+      <div id="tips"></div>
+      <div id="risk"></div>
+      <canvas id="bmiChart" width="300" height="300"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
